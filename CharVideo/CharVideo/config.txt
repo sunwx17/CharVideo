@@ -1,7 +1,8 @@
+formfirst 1
 reform 1
 recycle 1
 charsizeX 3
 charsizeY 5
-pxX 1
-pxY 2
-gradation 8
+pxX 3
+pxY 6
+gradation 16

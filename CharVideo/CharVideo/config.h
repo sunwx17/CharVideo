@@ -12,7 +12,7 @@ struct Config {
 		string name;
 		int value;
 	};
-	vector<A_Config> configs = { { "reform", 1 },{ "recycle", 1 },{ "charsizeX", 3 } ,{ "charsizeY", 5 } ,{ "pxX", 1 } ,{ "pxY", 2 } ,{ "gradation", 8 } };
+	vector<A_Config> configs = { { "reform", 1 },{ "recycle", 1 },{ "charsizeX", 3 } ,{ "charsizeY", 5 } ,{ "pxX", 1 } ,{ "pxY", 2 } ,{ "gradation", 8 } ,{"formfirst", 1} };
 	int WriteIn(vector<string>);
 };
 

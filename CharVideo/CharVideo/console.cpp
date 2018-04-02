@@ -13,9 +13,13 @@ void setFont(int x, int y) {
 }
 
 void setWindow(int x, int y) {
+	HWND hwnd = GetForegroundWindow();
 	char cmd[28];
 	sprintf_s(cmd, "mode con cols=%d lines=%d", x, y);
+	SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 1280 , 960, NULL);
 	system(cmd);
+	//COORD setbuffer = GetLargestConsoleWindowSize(hwnd);
+	//SetConsoleScreenBufferSize(hwnd, setbuffer);
 }
 
 void FullScreen() {//À´×ÔÍøÂç

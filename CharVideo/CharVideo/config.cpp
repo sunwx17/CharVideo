@@ -1,7 +1,7 @@
 #include "main.h"
 
 extern Config config;
-extern vector<Cs> cs_k;
+//extern vector<Cs> cs_k;
 
 vector<string> GetLineFromFile(string path) {
 	ifstream fin(path);
@@ -58,14 +58,16 @@ int Config::WriteIn(vector<string> k) {
 
 int init() {
 	setFont(8, 18);
-	vector<string> config_0 = GetLineFromFile("../config.txt");
+	system("mode con:cols=120 lines=30");
+	vector<string> config_0 = GetLineFromFile(".\\config.txt");
 	for (auto config_1 : config_0) {
 		if (config.WriteIn(RemoveNote(SplitByChar(config_1, ' '))) != 0) {
 			cout << "Config Error.\n";
 			return -1;
 		};
 	}
-	vector<string> video_0 = GetLineFromFile("../video.txt");
+	/*
+	vector<string> video_0 = GetLineFromFile("./CharVideo/video.txt");
 	for (auto video_1 : video_0) {
 		Cs new_cs;
 		if (new_cs.WriteIn(RemoveNote(SplitByChar(video_1, ' ')))) {
@@ -74,5 +76,6 @@ int init() {
 		}
 		cs_k.push_back(new_cs);
 	}
+	*/
 	return 0;
 }
